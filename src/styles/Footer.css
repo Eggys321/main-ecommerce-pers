@@ -1,0 +1,18 @@
+.footer{
+    background-color: #0C0C0C;
+    color: #EEFFFF;
+    margin-top: 5px;
+}
+.footer-inner{
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding-top: 4rem;
+}
+.footer-inner-data ul{
+    list-style: none;
+    /* margin: 50px; */
+    /* gap: 50px; */
+}

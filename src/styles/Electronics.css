@@ -1,0 +1,45 @@
+.component-title-electronics {
+    background-color: #ed017f;
+    color: white;
+    /* border-radius: 10px 0 0 10px; */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    /* text-align: center; */
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.component-data-mapped-electronics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* place-content: center; */
+    place-items: center;
+}
+
+.component-data-inner-electronics img {
+    /* max-width: 10rem; */
+    width: 15rem;
+    height: 20rem;
+    padding: 30px;
+    /* box-shadow: 0 0 5px -2px inset #141111; */
+}
+
+.component-data-inner-electronics {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.component-data-inner-electronics:hover {
+    /* max-width: 10rem; */
+    /* width: 10rem;
+  height: 25rem; */
+    /* padding: 10px; */
+    box-shadow: 0 0 5px -2px inset #141111;
+}

@@ -1,0 +1,23 @@
+.inner-single-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-single-product-image img {
+  width: 15rem;
+  height: 20rem;
+  padding: 30px;
+}
+.inner-single-product-data{
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+.inner-single-product-data a{
+    text-decoration: none;
+    color: #94004F;
+    
+}
