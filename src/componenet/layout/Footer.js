@@ -3,8 +3,8 @@ import { useState } from 'react'
 import { dataFooter } from '../../FooterDB'
 import '../../styles/Footer.css'
 const Footer = () => {
-  const [data,setData] = useState(dataFooter)
-  console.log(data);
+  const [data] = useState(dataFooter)
+  // console.log(data);
   return (
     <div className='footer'>
       {/* <h2>Footer</h2> */}

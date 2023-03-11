@@ -1,27 +1,26 @@
-import logo from './logo.svg';
-import { useState,useEffect } from 'react';
-import './App.css';
-import Home from './componenet/Home';
-import Navbar from './componenet/layout/Navbar';
-import Cart from './componenet/Cart';
-import Footer from './componenet/layout/Footer';
+import logo from './logo.svg'
+import { useState, useEffect } from 'react'
+import './App.css'
+import Home from './componenet/Home'
+import Navbar from './componenet/layout/Navbar'
+import Cart from './componenet/Cart'
+import Footer from './componenet/layout/Footer'
 import 'animate.css'
 import SingleProduct from './componenet/pages/SingleProduct'
-import { BrowserRouter, Route,Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css'
-
 
 const cartItemsFromLocalStorage =
   JSON.parse(localStorage.getItem('cartItem')) || []
 
 function App() {
-   const [cartItem, setCartItems] = useState(cartItemsFromLocalStorage)
-   useEffect(() => {
-     localStorage.setItem('cartItem', JSON.stringify(cartItem))
-   }, [cartItem])
+  const [cartItem, setCartItems] = useState(cartItemsFromLocalStorage)
+  useEffect(() => {
+    localStorage.setItem('cartItem', JSON.stringify(cartItem))
+  }, [cartItem])
   // handleAddToCart
   function handleAddToCart(product) {
-    console.log(cartItem)
+    // console.log(cartItem)
     const productSelected = cartItem.find(
       (singleCart) => singleCart.id === product.id
     )
@@ -41,7 +40,7 @@ function App() {
   return (
     <div className=''>
       <BrowserRouter>
-        <Navbar cartItem={cartItem} />
+        <Navbar cartItem={cartItem} setCartItems={setCartItems} />
         <Routes>
           <Route
             index
@@ -68,4 +67,4 @@ function App() {
   )
 }
 
-export default App;
+export default App

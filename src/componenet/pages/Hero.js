@@ -45,7 +45,7 @@ const Hero = ({ cartItem, setCartItems, handleAddToCart }) => {
                 <div className='inner-hero2-img'>
                   <h2> {title.slice(0, 11)}</h2>
                   <Link to={`/SingleProduct/${id}`}>
-                    <img src={image} alt='' />
+                    <img src={image} alt={title} />
                   </Link>
                   <p> ${price} </p>
                   <button

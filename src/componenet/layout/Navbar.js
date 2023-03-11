@@ -9,7 +9,7 @@ const Navbar = ({cartItem}) => {
   return (
     <div className='navbar'>
       <Marque />
-      <header className='container navv'>
+      <header className='container'>
         <div>
           <Link to='/'>
             <h1>Eggys🏬</h1>

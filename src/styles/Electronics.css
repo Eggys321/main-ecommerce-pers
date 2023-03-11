@@ -17,6 +17,9 @@
     grid-template-columns: repeat(3, 1fr);
     /* place-content: center; */
     place-items: center;
+    text-align: center;
+    gap: 4rem;
+    height: 60rem;
 }
 
 .component-data-inner-electronics img {
@@ -28,12 +31,16 @@
 }
 
 .component-data-inner-electronics {
+    /* height: 20rem;
+    width: 15rem; */
+    border-radius: 10px;
     margin-top: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 8px;
+    /* box-shadow: 0 0 5px -2px inset #141111; */
 }
 
 .component-data-inner-electronics:hover {

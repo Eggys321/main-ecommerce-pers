@@ -27,8 +27,8 @@ const Electronics = ({ cartItem, setCartItems, handleAddToCart }) => {
         {data.map((datumElectronics) => {
           const { title, id, image, price } = datumElectronics
           return (
-            <div>
-              <div className='component-data-inner-electronics' key={id}>
+            <div key={id}>
+              <div className='component-data-inner-electronics'>
                 <h4>{title.slice(0, 11)} </h4>
                 <Link to={`/SingleProduct/${id}`}>
                   <img src={image} alt='' />
@@ -37,7 +37,7 @@ const Electronics = ({ cartItem, setCartItems, handleAddToCart }) => {
               </div>
               <button
                 onClick={() => {
-                  handleAddToCart(datumElectronics)
+                  handleAddToCart(datumElectronics);
                   notify()
                 }}
               >

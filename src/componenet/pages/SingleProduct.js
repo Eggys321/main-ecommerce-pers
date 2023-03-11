@@ -10,7 +10,7 @@ const SingleProduct = ({ handleAddToCart }) => {
   const { data, isLoading, error } = useFetch(
     `https://fakestoreapi.com/products/${id}`
     )
-    const { title, image, description, price, rating } = data
+    const { title, image, description, price, rating,idx } = data
     const notify = () => {
       // toast('An item has been added')
       toast.success('An item has been added !', {
@@ -30,7 +30,7 @@ const SingleProduct = ({ handleAddToCart }) => {
       {isLoading && <BeatLoader />}
       <div className='inner-single-product'>
         <div className='inner-single-product-image'>
-          <img src={image} alt='' />
+          <img src={image} alt={title} />
         </div>
         <div className='inner-single-product-data'>
           <h1 style={{ color: '#94004F' }}> {title} </h1>

@@ -26,15 +26,22 @@ const Jewelry = ({ cartItem, setCartItems, handleAddToCart }) => {
         {data.map((datumJewelry) => {
           const { title, image, id, price } = datumJewelry
           return (
-            <div>
-              <div className='component-data-inner-jewelry' key={id}>
+            <div key={id}>
+              <div className='component-data-inner-jewelry'>
                 <h4>{title.slice(0, 11)} </h4>
                 <Link to={`/SingleProduct/${id}`}>
                   <img src={image} alt='' />
                 </Link>
                 <p>${price} </p>
               </div>
-              <button onClick={() => {handleAddToCart(datumJewelry); notify()}}>add to cart</button>
+              <button
+                onClick={() => {
+                  handleAddToCart(datumJewelry)
+                  notify()
+                }}
+              >
+                add to cart
+              </button>
             </div>
           )
         })}
