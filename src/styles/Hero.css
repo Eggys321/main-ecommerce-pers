@@ -44,7 +44,6 @@ img {
 
 .inner-hero2-data {
   text-align: center;
-  
 }
 .inner-hero2-data img {
   width: 8rem;
@@ -59,3 +58,22 @@ img {
     width: 8rem;
     
 } */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .hero {
+    /* background-color: #94004f; */
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    height: 55rem;
+    flex-direction: column;
+  }
+  .inner-hero1 img {
+    width: 130%;
+
+    /* background-color: red; */
+  }
+}

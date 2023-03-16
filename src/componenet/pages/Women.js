@@ -52,3 +52,66 @@ const Women = ({ cartItem, setCartItems, handleAddToCart }) => {
 }
 
 export default Women
+
+// function More ({data,handleAddToCart,notify}){
+//   return (
+//     <div>
+//       <div className='component-data-mapped-women'>
+//         {/* <button onClick={() => handleMore()}>view more</button> */}
+//         {data.map((datumWomen) => {
+//           const { image, price, title, id } = datumWomen
+//           return (
+//             <div key={id}>
+//               <div className='component-data-inner-women'>
+//                 <h4>{title.slice(0, 18)} </h4>
+//                 <Link to={`/SingleProduct/${id}`}>
+//                   <img src={image} alt='' />
+//                 </Link>
+//                 <p>${price} </p>
+//               </div>
+//               <button
+//                 onClick={() => {
+//                   handleAddToCart(datumWomen)
+//                   notify()
+//                 }}
+//               >
+//                 add to cart
+//               </button>
+//             </div>
+//           )
+//         })}
+//       </div>
+//     </div>
+//   )
+// }
+// function Mores({ data, handleAddToCart, notify }) {
+//   return (
+//     <div>
+//       <div className='component-data-mapped-womend'>
+//         {data.map((datumWomen) => {
+//           const { image, price, title, id } = datumWomen
+//           return (
+//             <div key={id}>
+//               <div className='component-data-inner-womens'>
+//                 <h4>{title.slice(0, 18)} </h4>
+//                 <Link to={`/SingleProduct/${id}`}>
+//                   <img src={image} alt='' />
+//                 </Link>
+//                 <p>${price} </p>
+//               </div>
+//               <button
+//                 onClick={() => {
+//                   handleAddToCart(datumWomen)
+//                   notify()
+//                 }}
+//               >
+//                 add to cart
+//               </button>
+//             </div>
+//           )
+//         })}
+//       </div>
+//     </div>
+//   )
+// }
+

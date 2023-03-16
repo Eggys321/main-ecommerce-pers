@@ -56,6 +56,9 @@ input[type='search'] {
   outline: none;
   padding-left: 15px;
 }
+input[type='search']:focus{
+  box-shadow: 0 0 8px 3px #bfa4fa;
+}
 input[type='search']::placeholder {
   color: #212222;
   font-size: 16px;
@@ -70,4 +73,32 @@ form > button {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   cursor: pointer;
+}
+
+/* 320 */
+@media (min-width: 320px) and (max-width: 480px) {
+  header {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem; */
+    /* position: fixed;
+      top: 0vh;
+      width: 100%; */
+
+    /* background-color: green; */
+  }
+  
+  /* input[type='search'] {
+    display: none;
+  } */
+.form-control, .acct, .help{
+  display: none;
+}
+nav{
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
 }

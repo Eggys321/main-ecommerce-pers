@@ -4,22 +4,34 @@ import Marque from '../pages/Marque'
 import '../../styles/Navbar.css'
 import {AiOutlineSearch} from 'react-icons/ai'
 import { BsCart4 } from 'react-icons/bs'
+import { useState } from 'react'
 
 const Navbar = ({cartItem}) => {
+  const [searchItem,setSearchItem] = useState('')
+  function searchProducts(e){
+    e.preventDefault()
+    setSearchItem((prev)=>{
+      return {...prev}
+
+    })
+
+
+  }
   return (
     <div className='navbar'>
       <Marque />
       <header className='container'>
         <div>
           <Link to='/'>
-            <h1>Eggys🏬</h1>
+            <h1>Eggys</h1>
           </Link>
         </div>
         <div className='form-control'>
-          <form action=''>
+          <form onSubmit={searchProducts}>
             <input
               type='search'
               placeholder='search products, brands and categories...'
+              onChange={(e)=> setSearchItem(e.target.value)}
             />
             <button>
               <AiOutlineSearch />
@@ -28,10 +40,10 @@ const Navbar = ({cartItem}) => {
           </form>
         </div>
         <nav>
-          <div>
+          <div className='acct'>
             <Link>Account</Link>
           </div>
-          <div>
+          <div className='help'>
             <Link>Help</Link>
           </div>
           <div>
@@ -42,6 +54,7 @@ const Navbar = ({cartItem}) => {
           </div>
         </nav>
       </header>
+        <p> {searchItem} </p>
     </div>
   )
 }
